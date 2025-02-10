@@ -18,7 +18,7 @@ loaded_model = pickle.load(open(model_path, "rb"))
 
 #  Creating the function for prediction.
 def diabetes_prediction(new_data):
-    #  changing the input_data into the numpy array.
+    #  changing the input_data into the numpy array
     input_data_as_np = np.array(new_data)
 
     #  now change the dimensions of the numpy array
