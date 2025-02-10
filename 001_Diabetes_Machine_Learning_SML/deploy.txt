@@ -1,0 +1,6 @@
+https://deployedmachinelearningmodelai-xc6yqhbv7wsbsfabbqfrfw.streamlit.app/
+
+
+
+we need to place the model.pkl outside the github main repo because it cannot find inside the individual Folder so place 
+all the model.pkl file outside the main root directory and also add app.py file in the different folder.
