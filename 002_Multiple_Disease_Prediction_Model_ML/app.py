@@ -8,19 +8,19 @@ import numpy as np
 
 diabetes_model = pickle.load(
     open(
-        "C:/Users/USER/OneDrive/Desktop/Github/Deployed_Project/Deployed_Machine_Learning_Model_AI/Models/002_multiple_diabetes.pkl",
+        "002_multiple_diabetes.pkl",
         "rb",
     )
 )
 parkinson_disease = pickle.load(
     open(
-        "C:/Users/USER/OneDrive/Desktop/Github/Deployed_Project/Deployed_Machine_Learning_Model_AI/Models/002_multiple_parkinson.pkl",
+        "002_multiple_parkinson.pkl",
         "rb",
     )
 )
 heart_disease = pickle.load(
     open(
-        "C:/Users/USER/OneDrive/Desktop/Github/Deployed_Project/Deployed_Machine_Learning_Model_AI/Models/002_multiple_heart_disease.pkl",
+        "002_multiple_heart_disease.pkl",
         "rb",
     )
 )

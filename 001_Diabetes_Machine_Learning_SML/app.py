@@ -10,7 +10,7 @@ import pickle
 #     )
 # )
 # model_path = r"C:\\Users\\USER\\OneDrive\\Desktop\\Github\\Deployed_Project\\Deployed_Machine_Learning_Models\\001_Diabetes_Model_Prediction\\diabetes_model.pkl"
-model_path = "diabetes_model.pkl"
+model_path = "001_diabetes_model.pkl"
 loaded_model = pickle.load(open(model_path, "rb"))
 
 # print(loaded_model)
