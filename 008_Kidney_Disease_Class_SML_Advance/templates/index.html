@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        padding: 10px;
+        text-align: center;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: inline-block;
+      }
+      .container {
+        width: 50%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #218838;
+      }
+      .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="/templates/about.html">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="container">
+      <div class="heading">
+        <h2>Medical Data Form</h2>
+      </div>
+      <form action="/prediction" method="post">
+        <label for="age">Age</label>
+        <input type="number" name="age" placeholder="Enter age" required />
+
+        <label for="blood_pressure">Blood Pressure</label>
+        <input
+          type="number"
+          name="blood_pressure"
+          placeholder="Enter blood pressure"
+          required
+        />
+
+        <label for="specific_gravity">Specific Gravity</label>
+        <input
+          type="number"
+          name="specific_gravity"
+          placeholder="Enter specific gravity"
+          required
+        />
+
+        <label for="albumin">Albumin</label>
+        <input
+          type="number"
+          name="albumin"
+          placeholder="Enter albumin level"
+          required
+        />
+
+        <label for="sugar">Sugar</label>
+        <input
+          type="number"
+          name="sugar"
+          placeholder="Enter sugar level"
+          required
+        />
+        <label for="red_blood_cell">Red Blood Cell</label>
+        <input
+          type="number"
+          name="red_blood_cell"
+          placeholder="Enter red_blood_cell"
+          required
+        />
+        <label for="pus_cell">Pus Cell</label>
+        <input
+          type="number"
+          name="pus_cell"
+          placeholder="Enter Pus_Cell"
+          required
+        />
+        <label for="pus_cell_clumps">Pus Cell Clumps</label>
+        <input
+          type="number"
+          name="pus_cell_clumps"
+          placeholder="Enter Pus_Cell_clumps"
+          required
+        />
+        <label for="bacteria">Bacteria</label>
+        <input
+          type="number"
+          name="bacteria"
+          placeholder="Enter bacteria"
+          required
+        /><label for="blood_glucose_random">Blood Glucose Random</label>
+        <input
+          type="number"
+          name="blood_glucose_random"
+          placeholder="Enter blood_glucose_random"
+          required
+        /><label for="blood_urea">Blood Urea</label>
+        <input
+          type="number"
+          name="blood_urea"
+          placeholder="Enter blood_urea"
+          required
+        /><label for="serum_creatinine">Serum Creatinine</label>
+        <input
+          type="number"
+          name="serum_creatinine"
+          placeholder="Enter serum_creatinine"
+          required
+        /><label for="sodium">Sodium</label>
+        <input
+          type="number"
+          name="sodium"
+          placeholder="Enter sodium"
+          required
+        /><label for="potassium">Potassium</label>
+        <input
+          type="number"
+          name="potassium"
+          placeholder="Enter potassium"
+          required
+        />
+
+        <label for="hemoglobin">Hemoglobin</label>
+        <input
+          type="number"
+          name="hemoglobin"
+          placeholder="Enter hemoglobin level"
+          required
+        />
+
+        <label for="packed_cell_volume">Packed Cell Volume</label>
+        <input
+          type="number"
+          name="packed_cell_volume"
+          placeholder="Enter packed cell volume"
+          required
+        />
+
+        <label for="white_blood_cell_count">White Blood Cell Count</label>
+        <input
+          type="number"
+          name="white_blood_cell_count"
+          placeholder="Enter WBC count"
+          required
+        />
+
+        <label for="red_blood_cell_count">Red Blood Cell Count</label>
+        <input
+          type="number"
+          name="red_blood_cell_count"
+          placeholder="Enter RBC count"
+          required
+        />
+
+        <label for="hypertension">Hypertension</label>
+        <input
+          type="number"
+          name="hypertension"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+
+        <label for="diabetes_mellitus">Diabetes Mellitus</label>
+        <input
+          type="number"
+          name="diabetes_mellitus"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+
+        <label for="coronary_artery_disease">Coronary Artery Disease</label>
+        <input
+          type="number"
+          name="coronary_artery_disease"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+        <label for="appetite">Appetite</label>
+        <input
+          type="number"
+          name="appetite"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+
+        <label for="pedal_edema">Pedal Edema</label>
+        <input
+          type="number"
+          name="pedal_edema"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+
+        <label for="anemia">Anemia</label>
+        <input
+          type="number"
+          name="anemia"
+          placeholder="1 for Yes, 0 for No"
+          required
+        />
+
+        <button type="submit">Submit</button>
+
+        <!--  we make the prediction. -->
+        {% if final_result %}
+        <div class="result">
+          <h2>{{final_result}}</h2>
+        </div>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+</html>

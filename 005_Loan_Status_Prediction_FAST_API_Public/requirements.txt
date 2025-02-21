@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+json
+pickle
+scikit-learn
+requests

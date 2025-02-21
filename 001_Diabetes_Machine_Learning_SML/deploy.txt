@@ -1,4 +1,4 @@
-https://deployedmachinelearningmodelai-xc6yqhbv7wsbsfabbqfrfw.streamlit.app/
+https://demo-deployed-jdasf6vmwktjhvxflp5bws.streamlit.app/
 
 
 
