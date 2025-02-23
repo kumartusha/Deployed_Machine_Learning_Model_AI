@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Data Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      /* Form Container */
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      /* Form Inputs */
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Submit Button */
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 12px;
+        color: rgb(0, 209, 171);
+        background-color: cornsilk;
+        border-radius: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">Weather Data Input</div>
+
+    <!-- Form -->
+    <div class="container">
+      <h2>Enter Weather Details</h2>
+      <form action="/prediction" method="post">
+        <div class="form-group">
+          <label for="Location">Location</label>
+          <input type="number" id="Location" name="Location" />
+        </div>
+
+        <div class="form-group">
+          <label for="Rainfall">Rainfall</label>
+          <input type="number" id="Rainfall" name="Rainfall" />
+        </div>
+
+        <div class="form-group">
+          <label for="Evaporation">Evaporation</label>
+          <input type="number" id="Evaporation" name="Evaporation" />
+        </div>
+
+        <div class="form-group">
+          <label for="Sunshine">Sunshine</label>
+          <input type="number" id="Sunshine" name="Sunshine" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindGustDir">Wind Gust Direction</label>
+          <input type="number" id="WindGustDir" name="WindGustDir" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindGustSpeed">Wind Gust Speed</label>
+          <input type="number" id="WindGustSpeed" name="WindGustSpeed" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindDir9am">Wind Direction 9AM</label>
+          <input type="number" id="WindDir9am" name="WindDir9am" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindDir3pm">Wind Direction 3PM</label>
+          <input type="number" id="WindDir3pm" name="WindDir3pm" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindSpeed9am">Wind Speed 9AM</label>
+          <input type="number" id="WindSpeed9am" name="WindSpeed9am" />
+        </div>
+
+        <div class="form-group">
+          <label for="WindSpeed3pm">Wind Speed 3PM</label>
+          <input type="number" id="WindSpeed3pm" name="WindSpeed3pm" />
+        </div>
+
+        <div class="form-group">
+          <label for="RainToday">Rain Today</label>
+          <input type="number" id="RainToday" name="RainToday" />
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="RainTomorrow">Rain Tomorrow</label>
+          <input type="number" id="RainTomorrow" name="RainTomorrow" />
+        </div> -->
+
+        <div class="form-group">
+          <label for="Year">Year</label>
+          <input type="number" id="Year" name="Year" />
+        </div>
+
+        <div class="form-group">
+          <label for="Month">Month</label>
+          <input type="number" id="Month" name="Month" />
+        </div>
+
+        <div class="form-group">
+          <label for="Day">Day</label>
+          <input type="number" id="Day" name="Day" />
+        </div>
+
+        <div class="form-group">
+          <label for="Temp_diff">Temperature Difference</label>
+          <input type="number" id="Temp_diff" name="Temp_diff" />
+        </div>
+
+        <div class="form-group">
+          <label for="Temp_3pm_9am_diff">Temp 3PM - 9AM Difference</label>
+          <input
+            type="number"
+            id="Temp_3pm_9am_diff"
+            name="Temp_3pm_9am_diff"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Cloud_avg">Cloud Average</label>
+          <input type="number" id="Cloud_avg" name="Cloud_avg" />
+        </div>
+
+        <div class="form-group">
+          <label for="Humidity3pm_9am_Diff"
+            >Humidity 3PM - 9AM Difference</label
+          >
+          <input
+            type="number"
+            id="Humidity3pm_9am_Diff"
+            name="Humidity3pm_9am_Diff"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Pressure3pm_9am_Diff"
+            >Pressure 3PM - 9AM Difference</label
+          >
+          <input
+            type="number"
+            id="Pressure3pm_9am_Diff"
+            name="Pressure3pm_9am_Diff"
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+
+        {% if result %}
+        <div class="result">
+          <h3>{{result}}</h3>
+        </div>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+</html>
